@@ -27,9 +27,17 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a href="#top" aria-label="DigiGrow Sherine home">
-          <img src="/logo.png" alt="DigiGrow Sherine" className="brand-logo" />
-        </a>
+        <div className="site-header-inner">
+          <a href="#top" aria-label="DigiGrow Sherine home">
+            <img src="/logo.png" alt="DigiGrow Sherine" className="brand-logo" />
+          </a>
+          <nav className="quick-nav" aria-label="Jump to page section">
+            <a href="#problem">Problem</a>
+            <a href="#benefits">Benefits</a>
+            <a href="#process">Process</a>
+            <a className="quick-nav-cta" href="#book">Book free call</a>
+          </nav>
+        </div>
       </header>
 
       <section id="top" className="hero section-shell">
@@ -37,11 +45,6 @@ export default function Home() {
           <div className="eyebrow"><Sparkles size={15} /> For growing businesses in Nepal</div>
           <h1>Ready to <span>Grow Your Business Online</span> but Not Sure How?</h1>
           <p className="hero-subtitle">Get a free, personalised marketing plan in a One-to-One call. The plan is yours to keep, even if you never hire us.</p>
-          <div className="hero-description">
-            <p>This is a free one-to-one AI marketing consultation.</p>
-            <p>It is for small and medium business owners who post, boost, and still struggle to sell.</p>
-            <p>You leave the call with a customised marketing plan in PDF format that you can start using right away.</p>
-          </div>
           <a className="primary-button" href="#book">Book Your FREE Consultation <ArrowRight size={18} /></a>
           <p className="microcopy"><Check size={15} /> Free consultation · Custom PDF plan · No obligation</p>
         </div>
@@ -69,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="problem-section">
+      <section id="problem" className="problem-section">
         <div className="section-shell problem-grid">
           <div className="section-heading left-heading">
             <span className="section-number">01</span>
@@ -83,7 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="benefits-section section-shell">
+      <section id="benefits" className="benefits-section section-shell">
         <div className="section-heading centered-heading">
           <span className="section-number">02</span>
           <p className="section-label">YOUR CLARITY SESSION</p>
@@ -100,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="process-section">
+      <section id="process" className="process-section">
         <div className="section-shell">
           <div className="section-heading centered-heading">
             <span className="section-number light">03</span>

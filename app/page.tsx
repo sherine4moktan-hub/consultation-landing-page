@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, Check, FileText, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, BarChart3, Check, FileText, MessageCircle } from "lucide-react";
 import ConsultationForm from "@/components/ConsultationForm";
 
 const problems = [
@@ -42,7 +42,7 @@ export default function Home() {
 
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
-          <div className="eyebrow"><Sparkles size={15} /> For growing businesses in Nepal</div>
+          <div className="eyebrow">For growing businesses in Nepal</div>
           <h1>Ready to <span>Grow Your Business Online</span> but Not Sure How?</h1>
           <p className="hero-subtitle">Get a free, personalised marketing plan in a One-to-One call. The plan is yours to keep, even if you never hire us.</p>
           <a className="primary-button" href="#book">Book Your FREE Consultation <ArrowRight size={18} /></a>

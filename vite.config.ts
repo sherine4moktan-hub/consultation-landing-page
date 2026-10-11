@@ -37,6 +37,20 @@ const localBindingConfig = {
 };
 
 export default defineConfig(async ({ command }) => {
+  const vercelBuild = process.env.VERCEL === "1" || process.env.NITRO_PRESET === "vercel";
+
+  if (vercelBuild) {
+    const { nitro } = await import("nitro/vite");
+    return {
+      plugins: [vinext(), nitro()],
+      build: {
+        rolldownOptions: {
+          external: ["cloudflare:workers"],
+        },
+      },
+    };
+  }
+
   // Use Miniflare's local Request.cf placeholder unless fetching is requested.
   process.env.CLOUDFLARE_CF_FETCH_ENABLED ??= "false";
   process.env.WRANGLER_SEND_METRICS ??= "false";

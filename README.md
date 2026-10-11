@@ -2,6 +2,25 @@
 
 A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
 
+## Vercel deployment
+
+The repository includes a Vercel-specific Vinext + Nitro build. `vercel.json`
+selects the Nitro framework and runs `npm run build:vercel`, which produces
+Vercel Build Output in `.vercel/output` instead of a Next.js `.next` directory.
+
+Add `LEAD_WEBHOOK_URL` in the Vercel project's environment variables before
+using the consultation form. Vercel form submissions are sent to that HTTPS
+webhook as JSON. The existing Sites/Cloudflare deployment continues to store
+submissions in D1 and does not require this variable.
+
+To reproduce the Vercel build locally:
+
+```powershell
+$env:VERCEL = "1"
+$env:NITRO_PRESET = "vercel"
+npm run build:vercel
+```
+
 ## Prerequisites
 
 - Node.js `>=22.13.0`

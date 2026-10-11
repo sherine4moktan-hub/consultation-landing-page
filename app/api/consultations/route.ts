@@ -1,5 +1,4 @@
-import { getDb } from "@/db";
-import { consultationLeads } from "@/db/schema";
+import { saveConsultationLead } from "@/db/runtime";
 
 export const dynamic = "force-dynamic";
 
@@ -28,8 +27,14 @@ export async function POST(request: Request) {
       catch { return Response.json({ error: "Please enter a valid website URL." }, { status: 400 }); }
     }
 
-    const db = getDb();
-    const [lead] = await db.insert(consultationLeads).values({ fullName, email, whatsapp, businessName, websiteUrl: websiteUrl || null, message: message || null }).returning({ id: consultationLeads.id });
+    const lead = await saveConsultationLead({
+      fullName,
+      email,
+      whatsapp,
+      businessName,
+      websiteUrl: websiteUrl || null,
+      message: message || null,
+    });
     return Response.json({ ok: true, id: lead.id }, { status: 201 });
   } catch (error) {
     console.error("Consultation form submission failed", error);

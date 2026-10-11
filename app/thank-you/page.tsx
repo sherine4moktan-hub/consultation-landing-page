@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowLeft, MessageCircle, Play } from "lucide-react";
+import { ArrowLeft, Check, MessageCircle, Play } from "lucide-react";
 
 export const metadata: Metadata = { title: "Thank You | DigiGrow Sherine", robots: { index: false, follow: false } };
 
@@ -19,6 +19,7 @@ export default function ThankYouPage() {
       <div className="thank-you-shell">
         <div className="thank-you-grid">
           <div className="thank-you-copy">
+            <span className="confirmation-mark" aria-hidden="true"><Check size={22} strokeWidth={3} /></span>
             <p className="section-label">REQUEST RECEIVED</p>
             <h1><span>Congratulations!</span><span>You&apos;re one step closer.</span></h1>
             <p className="thank-you-lead">Thank you for taking the first step to grow your business online.</p>

@@ -168,6 +168,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .field-group input[aria-invalid="true"] { border-color: #b42318; }
 .field-error { margin: 6px 0 0; color: #a11c14; font-size: 12px; }
 .form-error { margin: 18px 0 0; padding: 12px 14px; border-radius: 10px; background: #fff1f0; color: #8f1d15; font-size: 13px; }
+.form-error:empty { display: none; }
 .submit-button { width: 100%; min-height: 52px; margin-top: 20px; border: 0; border-radius: 999px; background: var(--teal); color: white; font-weight: 800; cursor: pointer; box-shadow: 0 13px 30px rgba(5,96,93,.21); transition: transform .2s, background .2s; }
 .submit-button:hover:not(:disabled) { transform: translateY(-2px); background: var(--teal-dark); }
 .submit-button:disabled { opacity: .65; cursor: wait; }

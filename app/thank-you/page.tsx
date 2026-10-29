@@ -12,7 +12,7 @@ export default function ThankYouPage() {
     <main className="thank-you-page">
       <header className="site-header">
         <div className="site-header-inner">
-          <a href="/" aria-label="DigiGrow Sherine home"><img src="/logo.png" alt="DigiGrow Sherine" className="brand-logo" /></a>
+          <a href="/" aria-label="DigiGrow Sherine home"><img src="/logo.svg" alt="DigiGrow Sherine" className="brand-logo" /></a>
           <a className="back-link" href="/"><ArrowLeft size={16} /> Back to landing page</a>
         </div>
       </header>

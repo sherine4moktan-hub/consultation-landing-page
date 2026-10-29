@@ -52,7 +52,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .section-shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
 .site-header { height: 72px; display: grid; place-items: center; border-bottom: 1px solid var(--line); background: rgba(247,250,249,.92); backdrop-filter: blur(16px); position: sticky; top: 0; z-index: 20; }
 .site-header-inner { width: min(1160px, calc(100% - 40px)); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; gap: 28px; animation: header-in .55s ease-out both; }
-.brand-logo { width: 148px; height: auto; display: block; }
+.brand-logo { width: auto; height: 46px; display: block; }
 .quick-nav { display: flex; align-items: center; gap: 7px; }
 .quick-nav a { display: inline-flex; align-items: center; justify-content: center; padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.76); color: rgba(5,17,16,.68); font-size: 11px; font-weight: 750; transition: background .2s, color .2s, border-color .2s, transform .2s; }
 .quick-nav a:hover { border-color: rgba(5,96,93,.25); background: var(--mist); color: var(--ink); transform: translateY(-2px); }
@@ -176,7 +176,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hp-field { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; }
 
 footer { padding: 42px 20px; text-align: center; border-top: 1px solid var(--line); background: white; }
-footer img { width: 180px; }
+footer img { width: auto; height: 64px; }
 footer p { margin: 13px 0 0; color: rgba(5,17,16,.5); font-size: 12px; }
 
 .thank-you-page { min-height: 100vh; position: relative; overflow: hidden; background: var(--paper); }
@@ -225,7 +225,7 @@ footer p { margin: 13px 0 0; color: rgba(5,17,16,.5); font-size: 12px; }
   .section-shell { width: min(100% - 30px, 1160px); }
   .site-header { height: 64px; }
   .site-header-inner { width: calc(100% - 24px); gap: 10px; }
-  .brand-logo { width: 116px; }
+  .brand-logo { width: auto; height: 38px; }
   .quick-nav { gap: 4px; }
   .quick-nav a:not(.quick-nav-cta) { padding: 7px 8px; font-size: 9px; }
   .quick-nav-cta { display: none !important; }

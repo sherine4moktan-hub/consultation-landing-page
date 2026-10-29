@@ -29,7 +29,7 @@ export default function Home() {
       <header className="site-header">
         <div className="site-header-inner">
           <a href="#top" aria-label="DigiGrow Sherine home">
-            <img src="/logo.png" alt="DigiGrow Sherine" className="brand-logo" />
+            <img src="/logo.svg" alt="DigiGrow Sherine" className="brand-logo" />
           </a>
           <nav className="quick-nav" aria-label="Jump to page section">
             <a href="#problem">Problem</a>
@@ -149,7 +149,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><img src="/logo.png" alt="DigiGrow Sherine" /><p>AI-powered digital marketing clarity for growing businesses in Nepal.</p></footer>
+      <footer><img src="/logo.svg" alt="DigiGrow Sherine" /><p>AI-powered digital marketing clarity for growing businesses in Nepal.</p></footer>
     </main>
   );
 }

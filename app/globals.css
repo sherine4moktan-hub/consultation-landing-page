@@ -36,10 +36,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
-@keyframes play-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,.2); }
-  50% { box-shadow: 0 0 0 12px rgba(255,255,255,0); }
-}
 @keyframes confirmation-pop {
   0% { opacity: 0; transform: scale(.55) rotate(-10deg); }
   65% { opacity: 1; transform: scale(1.12) rotate(2deg); }
@@ -190,15 +186,14 @@ footer p { margin: 13px 0 0; color: rgba(5,17,16,.5); font-size: 12px; }
 .thank-you-copy h1 span { display: block; }
 .thank-you-copy h1 span:last-child { margin-top: 6px; color: var(--teal); font-size: .78em; }
 .thank-you-lead { max-width: 620px; margin: 18px auto 0; color: rgba(5,17,16,.64); font-size: 18px; line-height: 1.6; }
-.vimeo-wrap { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(5,96,93,.15); border-radius: 25px; background: var(--ink); box-shadow: 0 24px 60px rgba(5,17,16,.15); }
-.vimeo-wrap iframe { width: 100%; height: 100%; border: 0; }
-.vimeo-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 30px; color: white; text-align: center; background: radial-gradient(circle at 50% 35%, rgba(5,96,93,.68), var(--ink) 64%); }
+.video-wrap { width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(5,96,93,.15); border-radius: 25px; background: var(--ink); box-shadow: 0 24px 60px rgba(5,17,16,.15); }
+.video-wrap iframe { width: 100%; height: 100%; border: 0; }
 .thank-you-copy { animation: fade-up .7s .1s ease-out both; }
-.vimeo-wrap { animation: fade-up .75s .22s ease-out both; }
-.vimeo-play { width: 62px; height: 62px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 50%; background: white; color: var(--teal); animation: play-pulse 2.4s ease-in-out infinite; }
-.vimeo-placeholder strong { font-family: Georgia, serif; font-size: 24px; font-weight: 500; }
-.vimeo-placeholder p { margin: 8px 0 0; color: rgba(255,255,255,.58); font-size: 14px; }
+.video-wrap { animation: fade-up .75s .22s ease-out both; }
 .whatsapp-button { display: inline-flex; min-height: 55px; align-items: center; justify-content: center; gap: 10px; margin-top: 2px; padding: 0 25px; border-radius: 999px; background: #148348; color: white; font-weight: 800; box-shadow: 0 14px 34px rgba(20,131,72,.22); transition: transform .2s, background .2s; animation: fade-up .7s .36s ease-out both; }
+.whatsapp-button-copy { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+.whatsapp-button-copy strong { font-size: 14px; }
+.whatsapp-button-copy small { margin-top: 2px; color: rgba(255,255,255,.78); font-size: 12px; font-weight: 600; letter-spacing: .02em; }
 .whatsapp-button:hover { transform: translateY(-2px); background: #0e6c3a; }
 
 @media (max-width: 960px) {
@@ -218,7 +213,7 @@ footer p { margin: 13px 0 0; color: rgba(5,17,16,.5); font-size: 12px; }
   .thank-you-grid { gap: 25px; }
   .thank-you-copy { text-align: center; }
   .thank-you-lead { margin-inline: auto; }
-  .vimeo-wrap { width: min(720px, 100%); margin-inline: auto; }
+  .video-wrap { width: min(720px, 100%); margin-inline: auto; }
 }
 
 @media (max-width: 700px) {
@@ -258,7 +253,7 @@ footer p { margin: 13px 0 0; color: rgba(5,17,16,.5); font-size: 12px; }
   .thank-you-shell { width: calc(100% - 30px); min-height: calc(100svh - 64px); padding: 44px 0 60px; }
   .thank-you-grid { gap: 32px; }
   .thank-you-copy h1 { font-size: clamp(42px, 12vw, 56px); }
-  .vimeo-wrap { border-radius: 20px; }
+  .video-wrap { border-radius: 20px; }
   .whatsapp-button { width: 100%; }
 }
 
